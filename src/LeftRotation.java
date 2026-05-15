@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class LeftRotation {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         List<Integer> myArr = new ArrayList<>();
         myArr.add(1);
         myArr.add(2);
@@ -11,6 +10,7 @@ public class LeftRotation {
         myArr.add(4);
         myArr.add(5);
         System.out.println(rotateLeft(4,myArr));
+        System.out.println(optimizedRotateLeft(4,myArr));
     }
     public static List<Integer> rotateLeft(int d, List<Integer> arr) {
 
@@ -25,5 +25,14 @@ public class LeftRotation {
         }
         return arr;
 
+    }
+    public static List<Integer> optimizedRotateLeft(int d, List<Integer> arr) {
+        int n = arr.size();
+        List<Integer> result = new ArrayList<>(n);
+        d = d % n;
+        for (int i = 0; i < n; i++) {
+            result.add(arr.get((i + d) % n));
+        }
+        return result;
     }
 }
