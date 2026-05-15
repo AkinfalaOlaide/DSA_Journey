@@ -1,8 +1,9 @@
+
 import java.util.Arrays;
 import java.util.List;
 
 public class DSA {
-    public static void main(String[] args) {
+    static void main() {
         List<List<Integer>> arr = Arrays.asList(
                 Arrays.asList(-9, -9, -9,  1,  1,  1),
                 Arrays.asList( 0, -9,  0,  4,  3,  2),
@@ -25,7 +26,7 @@ public class DSA {
         };
 
         int result2 = hourglassSumArray(myArray);
-        System.out.println("Maximum hourglassArray sum: " + result);
+        System.out.println("Maximum hourglassArray sum: " + result2);
     }
     public static int hourglassSum(List<List<Integer>> arr) {
         int max = Integer.MIN_VALUE; // we are using this and not zero because we can have negative number in each cell of the arrays
