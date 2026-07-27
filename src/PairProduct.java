@@ -7,9 +7,10 @@ public static List<Integer> pairProduct(List<Integer> numbers, int target) {
     List<Integer> result = new ArrayList<>();
     int complement;
     for(int i = 0 ; i < numbers.size(); i++) {
-        complement = target/numbers.get(i);
-        if(!previousNums.containsKey(complement) || target % numbers.get(i) != 0) {
-            previousNums.put(numbers.get(i) , i);
+        int num = numbers.get(i);
+        complement = target/num;
+        if(!previousNums.containsKey(complement) || target % num != 0) {
+            previousNums.put(num , i);
         }else{
             result.add(previousNums.get(complement));
             result.add(i);
