@@ -5,7 +5,7 @@ void main() {
 public static List<Integer> pairSum(List<Integer> numbers, int target) {
    HashMap<Integer, Integer> previousNums = new HashMap<>();
    List<Integer> result = new ArrayList<>();
-   int complement = 0;
+   int complement;
   for(int i = 0 ; i < numbers.size(); i++) {
       complement = target - numbers.get(i);
       if(!previousNums.containsKey(complement)) {
